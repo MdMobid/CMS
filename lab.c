@@ -8,7 +8,7 @@
 #define MAX_CLASSES 20
 #define MAX_STU     200
 #define MAX_QUIZZES 20
-#define DATA_DIR    "lab_data"
+#define DATA_DIR    "cms_data"
 
 typedef struct {
     int  roll;
