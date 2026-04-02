@@ -1,9 +1,9 @@
 import os, sys, webbrowser, pathlib, subprocess
 
 BASE = pathlib.Path(__file__).parent
-GUI  = BASE / "gui.html"
-LAB  = BASE / "lab"
-LAB_C= BASE / "lab.c"
+GUI  = BASE / "index.html"
+LAB  = BASE / "cms"
+LAB_C= BASE / "cms.c"
 
 def build_c():
     if not LAB.exists() or LAB_C.stat().st_mtime > LAB.stat().st_mtime:
@@ -18,5 +18,5 @@ if LAB_C.exists():
     build_c()
 
 url = GUI.as_uri()
-print(f"[C Lab CMS] Opening: {url}")
+print(f"[CMS] Opening: {url}")
 webbrowser.open(url)
